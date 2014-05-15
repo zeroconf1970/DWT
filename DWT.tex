@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{multirow}
 
 \title{Diskrete Wahrscheinlichkeitstheorie}
 \subtitle{Zusammenfassung für die Klausurvorbereitung}
@@ -32,6 +33,30 @@ Es erhebt keinen Anspruch auf Vollständigkeit und Korrektheit.
 \item $\left(1+\frac{1}{n}\right)^n=e$
 \end{itemize}
 
+\subsection{Kombinatorik}
+Anzahl der Verteilungen von v Bällen auf m Urnen.\\
+\begin{tabular}{|c||c|c|c|c|}
+\hline
+&beliebig &höchstens &mindestens&genau\\
+&viele Bälle&ein Ball& ein Ball& ein Ball\\
+& pro Urne& pro Urne& pro Urne& pro Urne\\
+& (beliebig)& (injektiv) & (surjektiv)& (bijektiv)\\
+\hline
+\hline
+Bälle unterscheidbar& \multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^\underline{n}$} &\multirow{2}{*}{$m!*S_{n,m}$} &\multirow{2}{*}{$n!$}\\
+Urnen unterscheidbar &&&&\\
+\hline
+Bälle unterscheidbar& \multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$}\\
+Urnen unterscheidbar &&&&\\
+\hline
+Bälle unterscheidbar& \multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$}\\
+Urnen unterscheidbar &&&&\\
+\hline
+Bälle unterscheidbar& \multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$} &\multirow{2}{*}{$m^n$}\\
+Urnen unterscheidbar &&&&\\
+\hline
+\end{tabular}
+
 \section{Diskrete Wahrscheinlichkeitsräume}
 
 \subsection{Grundlagen}
@@ -52,7 +77,7 @@ Es erhebt keinen Anspruch auf Vollständigkeit und Korrektheit.
 	\end{itemize}
 \item $\Pr[\emptyset]=0$,$\Pr[\Omega]=1$ 
 \item $0\leq \Pr[A] \leq 1$
-\item $\Pr[\overline{A}]=1-\Pr[A]$
+\item $\Pr[\bar A]=1-\Pr[A]$
 \item $A\subseteq B \Rightarrow \Pr[A]\leq \Pr[B]$
 \end{itemize}
 
