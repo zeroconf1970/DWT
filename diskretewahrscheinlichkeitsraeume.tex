@@ -26,4 +26,17 @@
 Laplace verteilt heißt, das jedes Elementarereignis gleich wahrscheinlich ist.
 
 \subsubsection{disjunkte Ereignisse}
-$\forall(i,j)\in\mathbb{N}: i\neq j, A_i\cap  A_j$
+$\forall(i,j)\in\mathbb{N}: i\neq j, A_i\cap  A_j=\emptyset$
+\begin{itemize}
+\item $\Pr[\cup^n_{i=1}A_i]=\sum^n_{i=1}\Pr[A_i]$
+\item $\Pr[A\cup B]=\Pr[A]+\Pr[B]$
+\item $\Pr[\cup^\infty_{i=1}]=\sum^\infty_{i=1}\Pr[A_i]$
+\end{itemize}
+
+\subsubsection{Siebformel,Prinzip der Inklusion/Exklusion}
+\begin{itemize}
+\item Zwei Ereignisse: $\Pr[A\cup B]=\Pr[A]+\Pr[B]-\Pr[A\cap B]$
+\item Drei Ereignisse: $\Pr[A_1\cup A_2\cup A_3]=\Pr[A_1]+\Pr[A_2]+\Pr[A_3]$\\
+				$-\Pr[A_1\cap A_2]-\Pr[A_1\cap A_3]-\Pr[A_2\cap A_3]$\\
+				$+\Pr[A_1\cap A_2\cap A_3]$
+\end{itemize}
