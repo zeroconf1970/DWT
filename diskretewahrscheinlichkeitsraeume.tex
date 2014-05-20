@@ -58,3 +58,17 @@ $\forall(i,j)\in\mathbb{N}: i\neq j, A_i\cap  A_j=\emptyset$
 \subsubsection{Wahl der Wahrscheinlichkeiten}
 Sofern nichts anderes gegeben ist, gilt das Prinzip von Laplace und alle Elementarereignisse sind gleichwahrscheinlich.\\
 $\Pr[E]=\frac{|E|}{|\Omega |}$
+
+\subsection{Bedingte Wahrscheinlichkeiten}
+\begin{itemize}
+\item $\Pr[B|B]=1$
+\item $\Pr[A|\Omega]=\Pr[A]$
+\item $\Pr[A|B]:=\frac{\Pr[A\cap B]}{\Pr[B]}$
+\end{itemize}
+\\
+\underline{Anmerkung}: $\Pr[\emptyset | B]= 0$ und $\Pr[\bar A|B]=1-\Pr[A|B]$\\
+\underline{Andere Schreibweise}: $\Pr[A\cap B]=\Pr[B|A]*\Pr[A]= \Pr[A|B]*\Pr[B]$
+
+\subsubsection{Multiplikationssatz}
+$\Pr[A_1\cap\ldots\cap A_n]>0\Rightarrow\Pr[A_1]*\Pr[A_2|A_1]*\Pr[A_3|A_1\cap A_2]*\ldots$\\
+$\dots*\Pr[A_n|A_1\cap\ldots\cap A_{n-1}]$
