@@ -36,7 +36,25 @@ $\forall(i,j)\in\mathbb{N}: i\neq j, A_i\cap  A_j=\emptyset$
 \subsubsection{Siebformel,Prinzip der Inklusion/Exklusion}
 \begin{itemize}
 \item Zwei Ereignisse: $\Pr[A\cup B]=\Pr[A]+\Pr[B]-\Pr[A\cap B]$
-\item Drei Ereignisse: $\Pr[A_1\cup A_2\cup A_3]=\Pr[A_1]+\Pr[A_2]+\Pr[A_3]$\\
-				$-\Pr[A_1\cap A_2]-\Pr[A_1\cap A_3]-\Pr[A_2\cap A_3]$\\
+\item Drei Ereignisse: $\Pr[A_1\cup A_2\cup A_3]=\Pr[A_1]+\Pr[A_2]+\Pr[A_3]\ldots$\\
+				$-\Pr[A_1\cap A_2]-\Pr[A_1\cap A_3]-\Pr[A_2\cap A_3]\ldots$\\
 				$+\Pr[A_1\cap A_2\cap A_3]$
+\item Allgemeiner Fall: $\Pr[\cup^n_{i=1}A_i]=\sum_{i=1}^n\Pr[A_i]-\sum_{1\leq i_1<i_2\leq n}\Pr[A_{i_1}\cap A_{i_2}]\pm \ldots$\\
+				$+(-1)^{l-1}\sum_{1\leq i_1<\ldots<i_2\leq n}\Pr[A_{i_1}\cap\ldots\cap A_{i_2}]\pm\ldots$\\
+				$+(-1)^{l-1}\Pr[A_1\cap\ldots\cap A_n]$
 \end{itemize}
+\\
+\underline{Anmerkung}: Üblicherweise benötigt man den Allgemeinen Fall während dieser Vorlesung nicht!\\
+
+\subsubsection{Boolsche Ungleichung}
+
+\begin{itemize}
+\item Ereignisse $A_1,\ldots, A_n$: $\Pr[\cup_{i=1}^n A_i]\leq\sum_{i=1}^n\Pr[A_i]$
+\item unendliche Ereignisse:$\Pr[\cup^\infty_{i=1} A_i]\leq\sum^\infty_{i=1}\Pr[A_i]$
+\end{itemize}
+\\
+\underline{Anmerkung}: Hiermit kann man den Allgemeinen Fall der Siebformel abschätzen.
+
+\subsubsection{Wahl der Wahrscheinlichkeiten}
+Sofern nichts anderes gegeben ist, gilt das Prinzip von Laplace und alle Elementarereignisse sind gleichwahrscheinlich.\\
+$\Pr[E]=\frac{|E|}{|\Omega |}$
