@@ -72,3 +72,19 @@ $\Pr[E]=\frac{|E|}{|\Omega |}$
 \subsubsection{Multiplikationssatz}
 $\Pr[A_1\cap\ldots\cap A_n]>0\Rightarrow\Pr[A_1]*\Pr[A_2|A_1]*\Pr[A_3|A_1\cap A_2]*\ldots$\\
 $\dots*\Pr[A_n|A_1\cap\ldots\cap A_{n-1}]$
+
+\subsubsection{Satz der totalen Wahrscheinlichkeit}
+Es gilt das alle Ereignisse paarweise disjunkt sind und B die Vereinigung dieser Ereignisse ist!
+\begin{itemize}
+\item endlicher Fall: $\Pr[B]=\sum_{i=1}^n\Pr[B|A_i]*\Pr[A_i]$
+\item unendlicher Fall: $\Pr[B]=\sum_{i=1}^\infty\Pr[B|A_i]*\Pr[A_i]$
+\end{itemize}
+\\
+\underline{Nützliche Erkenntnisse}:Seien $B\subseteq A\cup\bar A$ und $A\cap\bar A =\emptyset$ dann gilt $\Pr[B]=\Pr[B|A]*\Pr[A]+\Pr[B|\bar A]*\Pr[\bar A]$
+
+\subsubsection{Satz von Bayes}
+Es gilt alle Ereignisse sind paarweise disjunkt und größer Null und B die Vereinigung dieser Ereignisse und größer Null.
+\begin{itemize}
+\item Dann gilt für $i=1,\ldots,n$: $\Pr[A_i|B]=\frac{\Pr[A_i\cap B]}{\Pr[B]}=\frac{\Pr[B|A_i]*\Pr[A_i]}{\sum^n_{j=1}\Pr[B|A_j]*\Pr[A_j]}$
+\item Dann gilt für $i=1,\ldots$: $\Pr[A_i|B]=\frac{\Pr[A_i\cap B]}{\Pr[B]}=\frac{\Pr[B|A_i]*\Pr[A_i]}{\sum^\infty_{j=1}\Pr[B|A_j]*\Pr[A_j]}$
+\end{itemize}
