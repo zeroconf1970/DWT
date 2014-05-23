@@ -95,5 +95,20 @@ Unabhängigkeit heißt das A und B sich nicht gegenseitig beeinflussen, d.h. es 
 \begin{itemize}
 \item $\Pr[A\cap B]=\Pr[A]*\Pr[B]$
 \item Falls $\Pr[B]\neq0$: $\Pr[A]=\frac{\Pr[A\cap B]}{\Pr[B]}=\Pr[A|B]$
+\item $A_1,\ldots,A_n$ heißen unabhängig, wenn für alle Teilmengen $I = \{ i_1,\ldots, i_k\}\subseteq\{1,\ldots,n\}$ mit $i_1<\ldots<i_k$ gilt:\\
+	$\Pr[A_{i_1}\cap\ldots\cap A_{i_k}]=\Pr[A_{i_1}]*\ldots*\Pr[A_{i_k}]$
+\item $A_1,\ldots,A_n$ genau dann unabhängig, wenn $\forall (s_1,\ldots,s_n)\in\{0,1\}^n$ gilt, dass\\
+	$\Pr[A_1^{s_1}\cap\ldots\cap A_n^{s_n}]=\Pr[A_1^{s_1}]*\ldots*\Pr[A_1^{s_n}]$ mit $A_i^0=\bar A_i$ und $A_i^1=A_i$.
 \end{itemize}
+
+\subsection{Zufallsvariablen}
+
+\subsubsection{Grundlagen}
+\begin{itemize}
+\item $X:\Omega\rightarrow\mathbb{R}$
+\item $W_X:=X(\Omega)=\{x\in\mathbb{R};\exists\omega\in\Omega\text{ mit } X(\omega)=x\}$
+\item $\Pr[X\leq x_i]=\sum_{x\in W_x:x\leq x_i}\Pr[X=x]=\Pr[\{\omega\in\Omega ;X(\omega)\leq x_i\}]$
+\item (diskrete) Dichte(funktion): $f_{(X)}:\mathbb{R}$
+\end{itemize}
+
 
