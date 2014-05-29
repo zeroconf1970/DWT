@@ -108,7 +108,13 @@ Unabhängigkeit heißt das A und B sich nicht gegenseitig beeinflussen, d.h. es 
 \item $X:\Omega\rightarrow\mathbb{R}$
 \item $W_X:=X(\Omega)=\{x\in\mathbb{R};\exists\omega\in\Omega\text{ mit } X(\omega)=x\}$
 \item $\Pr[X\leq x_i]=\sum_{x\in W_x:x\leq x_i}\Pr[X=x]=\Pr[\{\omega\in\Omega ;X(\omega)\leq x_i\}]$
-\item (diskrete) Dichte(funktion): $f_{(X)}:\mathbb{R}$
+\item (diskrete) Dichte(funktion): $f_{X}:\mathbb{R}\ni x\mapsto\Pr[X=x]\in[0,1]$
+\item Verteilung(sfunktion): $F_X:\mathbb{R}\ni x\mapsto\Pr[X\leq x]=\sum_{x'\in W_x:x'\leq x}\Pr[X=x']\in[0,1]$
+\end{itemize}
+
+\subsubsection{Erwartungswert und Varianz}
+\begin{itemize}
+\item Sofern $\sum_{x\in W_x}|x|*\Pr[X=x]$ konvergiert gilt: $\mathbb{E}:=\sum_{x\in W_x}x*\Pr[X=x]=\sum_{x\in W_x}x*f_X(x)$
 \end{itemize}
 
 
