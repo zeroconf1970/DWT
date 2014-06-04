@@ -114,7 +114,11 @@ Unabhängigkeit heißt das A und B sich nicht gegenseitig beeinflussen, d.h. es 
 
 \subsubsection{Erwartungswert und Varianz}
 \begin{itemize}
-\item Sofern $\sum_{x\in W_x}|x|*\Pr[X=x]$ konvergiert gilt: $\mathbb{E}:=\sum_{x\in W_x}x*\Pr[X=x]=\sum_{x\in W_x}x*f_X(x)$
+\item Sofern $\sum_{x\in W_x}|x|*\Pr[X=x]$ konvergiert gilt:\\
+	$\mathbb{E}:=\sum_{x\in W_x}x*\Pr[X=x]=\sum_{x\in W_x}x*f_X(x)$
+\item Monotonie des Erwartungswertes: $X(\omega)\leq Y(\omega)\forall\omega\in\Omega\Rightarrow \mathbb{E}[X]\leq\mathbb{E}[Y]$
+\item $\mathbb{E}[a*X+b]=a*\mathbb{E}[X]+b$
+\item $\mathbb{E}[X]=\sum_{i=1}^\infty\Pr[X\geq i]=\sum_{i=0}^\infty i*\Pr[X=i]$
 \end{itemize}
 
 
