@@ -4,11 +4,11 @@
 \subsection{Grundlagen}
 
 \begin{itemize}
-\item diskreter Wahrscheinlichkeitsraum: $\Omega = \{\omega_1,\ldots,\omega_n\}$ $|$ $n\in \mathbb{N}$
+\item diskreter Wahrscheinlichkeitsraum: $\Omega = \{\omega_1,\omega_2,\ldots\}$ $|$ $n\in \mathbb{N}$
 \item Elementarereignis:\\
 	\begin{itemize}
 	\item $0 \leq \Pr[\omega_i]\leq 1$
-	\item $\sum_{i=1}^n\Pr[\omega_i]=1$
+	\item $\sum_{i=1}^\infty\Pr[\omega_i]=1$ oder $\sum_{w\in\Omega}\Pr[\omega]=1$
 	\item $\Pr[\omega_i]:=\frac{1}{|\Omega|}$
 	\end{itemize}
 \item Ereignis:\\
@@ -30,18 +30,18 @@ $\forall(i,j)\in\mathbb{N}: i\neq j, A_i\cap  A_j=\emptyset$
 \begin{itemize}
 \item $\Pr[\cup^n_{i=1}A_i]=\sum^n_{i=1}\Pr[A_i]$
 \item $\Pr[A\cup B]=\Pr[A]+\Pr[B]$
-\item $\Pr[\cup^\infty_{i=1}]=\sum^\infty_{i=1}\Pr[A_i]$
+\item $\Pr[\cup^\infty_{i=1}A_i]=\sum^\infty_{i=1}\Pr[A_i]$
 \end{itemize}
 
 \subsubsection{Siebformel,Prinzip der Inklusion/Exklusion}
 \begin{itemize}
 \item Zwei Ereignisse: $\Pr[A\cup B]=\Pr[A]+\Pr[B]-\Pr[A\cap B]$
-\item Drei Ereignisse: $\Pr[A_1\cup A_2\cup A_3]=\Pr[A_1]+\Pr[A_2]+\Pr[A_3]\ldots$\\
-				$-\Pr[A_1\cap A_2]-\Pr[A_1\cap A_3]-\Pr[A_2\cap A_3]\ldots$\\
+\item Drei Ereignisse: $\Pr[A_1\cup A_2\cup A_3]=\Pr[A_1]+\Pr[A_2]+\Pr[A_3]$\\
+				$-\Pr[A_1\cap A_2]-\Pr[A_1\cap A_3]-\Pr[A_2\cap A_3]$\\
 				$+\Pr[A_1\cap A_2\cap A_3]$
 \item Allgemeiner Fall: $\Pr[\cup^n_{i=1}A_i]=\sum_{i=1}^n\Pr[A_i]-\sum_{1\leq i_1<i_2\leq n}\Pr[A_{i_1}\cap A_{i_2}]\pm \ldots$\\
-				$+(-1)^{l-1}\sum_{1\leq i_1<\ldots<i_2\leq n}\Pr[A_{i_1}\cap\ldots\cap A_{i_2}]\pm\ldots$\\
-				$+(-1)^{l-1}\Pr[A_1\cap\ldots\cap A_n]$
+				$+(-1)^{l-1}\sum_{1\leq i_1<\ldots<i_l\leq n}\Pr[A_{i_1}\cap\ldots\cap A_{i_l}]\pm\ldots$\\
+				$+(-1)^{n-1}\Pr[A_1\cap\ldots\cap A_n]$
 \end{itemize}
 \\
 \underline{Anmerkung}: Üblicherweise benötigt man den Allgemeinen Fall während dieser Vorlesung nicht!\\
@@ -50,13 +50,13 @@ $\forall(i,j)\in\mathbb{N}: i\neq j, A_i\cap  A_j=\emptyset$
 
 \begin{itemize}
 \item Ereignisse $A_1,\ldots, A_n$: $\Pr[\cup_{i=1}^n A_i]\leq\sum_{i=1}^n\Pr[A_i]$
-\item unendliche Ereignisse:$\Pr[\cup^\infty_{i=1} A_i]\leq\sum^\infty_{i=1}\Pr[A_i]$
+\item unendlich viele Ereignisse:$\Pr[\cup^\infty_{i=1} A_i]\leq\sum^\infty_{i=1}\Pr[A_i]$
 \end{itemize}
 \\
 \underline{Anmerkung}: Hiermit kann man den Allgemeinen Fall der Siebformel abschätzen.
 
 \subsubsection{Wahl der Wahrscheinlichkeiten}
-Sofern nichts anderes gegeben ist, gilt das Prinzip von Laplace und alle Elementarereignisse sind gleichwahrscheinlich.\\
+Sofern nichts anderes gegeben ist, gilt das Prinzip von Laplace und alle Elementarereignisse sind gleichwahrscheinlich. Kann man auch an Aussagen wie er wählt zufällig eines aus X aus erkennen.\\
 $\Pr[E]=\frac{|E|}{|\Omega |}$
 
 \subsection{Bedingte Wahrscheinlichkeiten}
@@ -70,11 +70,11 @@ $\Pr[E]=\frac{|E|}{|\Omega |}$
 \underline{Andere Schreibweise}: $\Pr[A\cap B]=\Pr[B|A]*\Pr[A]= \Pr[A|B]*\Pr[B]$
 
 \subsubsection{Multiplikationssatz}
-$\Pr[A_1\cap\ldots\cap A_n]>0\Rightarrow\Pr[A_1]*\Pr[A_2|A_1]*\Pr[A_3|A_1\cap A_2]*\ldots$\\
+$\Pr[A_1\cap\ldots\cap A_n]>0\Rightarrow\Pr[A_1\cap\ldots\cap A_n]=\Pr[A_1]*\Pr[A_2|A_1]*\Pr[A_3|A_1\cap A_2]*\ldots$\\
 $\dots*\Pr[A_n|A_1\cap\ldots\cap A_{n-1}]$
 
 \subsubsection{Satz der totalen Wahrscheinlichkeit}
-Es gilt das alle Ereignisse paarweise disjunkt sind und B die Vereinigung dieser Ereignisse ist!
+Es gilt das alle Ereignisse $A_i$ paarweise disjunkt sind und B ist ein Ereignis, das eine Teilmenge von dem Ereignis $\cup_i A_i$ ist.
 \begin{itemize}
 \item endlicher Fall: $\Pr[B]=\sum_{i=1}^n\Pr[B|A_i]*\Pr[A_i]$
 \item unendlicher Fall: $\Pr[B]=\sum_{i=1}^\infty\Pr[B|A_i]*\Pr[A_i]$
@@ -83,7 +83,7 @@ Es gilt das alle Ereignisse paarweise disjunkt sind und B die Vereinigung dieser
 \underline{Nützliche Erkenntnisse}:Seien $B\subseteq A\cup\bar A$ und $A\cap\bar A =\emptyset$ dann gilt $\Pr[B]=\Pr[B|A]*\Pr[A]+\Pr[B|\bar A]*\Pr[\bar A]$
 
 \subsubsection{Satz von Bayes}
-Es gilt alle Ereignisse sind paarweise disjunkt und größer Null und B die Vereinigung dieser Ereignisse und größer Null.
+Es gilt alle Ereignisse sind paarweise disjunkt und größer Null und B ist ein Ereignis, das eine Teilmenge von dem Ereignis $\cup_i A_i$ ist und größer Null.
 \begin{itemize}
 \item Dann gilt für $i=1,\ldots,n$: $\Pr[A_i|B]=\frac{\Pr[A_i\cap B]}{\Pr[B]}=\frac{\Pr[B|A_i]*\Pr[A_i]}{\sum^n_{j=1}\Pr[B|A_j]*\Pr[A_j]}$
 \item Dann gilt für $i=1,\ldots$: $\Pr[A_i|B]=\frac{\Pr[A_i\cap B]}{\Pr[B]}=\frac{\Pr[B|A_i]*\Pr[A_i]}{\sum^\infty_{j=1}\Pr[B|A_j]*\Pr[A_j]}$
@@ -108,7 +108,7 @@ Unabhängigkeit heißt das A und B sich nicht gegenseitig beeinflussen, d.h. es 
 \item $X:\Omega\rightarrow\mathbb{R}$
 \item $W_X:=X(\Omega)=\{x\in\mathbb{R};\exists\omega\in\Omega\text{ mit } X(\omega)=x\}$
 \item $\Pr[X\leq x_i]=\sum_{x\in W_x:x\leq x_i}\Pr[X=x]=\Pr[\{\omega\in\Omega ;X(\omega)\leq x_i\}]$
-\item (diskrete) Dichte(funktion): $f_{X}:\mathbb{R}\ni x\mapsto\Pr[X=x]\in[0,1]$
+\item diskrete Dichte(funktion): $f_{X}:\mathbb{R}\ni x\mapsto\Pr[X=x]\in[0,1]$
 \item Verteilung(sfunktion): $F_X:\mathbb{R}\ni x\mapsto\Pr[X\leq x]=\sum_{x'\in W_x:x'\leq x}\Pr[X=x']\in[0,1]$
 \end{itemize}
 
